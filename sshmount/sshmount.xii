@@ -1,0 +1,25 @@
+# vim: set ts=2 sw=2 tw=0 ft=yaml:
+---
+sshmount:
+  type: node
+  network: default
+  pool: default
+  count: 1
+  image: {{ image }}
+
+  graphic: yes
+  user:
+    felixsch:
+      password: felix
+    root:
+      password: linux
+  ssh:
+    copy-key:
+      users:
+        - felixsch
+        - root
+  sshmount:
+    dev:
+      source: testdir
+      user: felixsch
+

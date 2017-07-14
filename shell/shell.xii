@@ -1,0 +1,22 @@
+# vim: set ts=2 sw=2 tw=0 ft=yaml:
+---
+shell:
+  type: node
+  pool: default
+  network: default
+  image: {{ image }}
+
+  graphic: yes
+  user:
+    felixsch:
+      password: felix
+    root:
+      password: linux
+  ssh:
+    copy-key:
+      users:
+        - felixsch
+        - root
+  shell:
+    - start: test.sh
+

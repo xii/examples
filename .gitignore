@@ -1,0 +1,12 @@
+*.vagrant
+*.venv
+*.pyc
+*.egg-info
+.tox
+.ropeproject
+*.ropeproject
+*/__pycache__
+build
+dist
+.cache
+.xii-env

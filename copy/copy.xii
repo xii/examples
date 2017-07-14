@@ -1,0 +1,24 @@
+# vim: set ts=2 sw=2 tw=0 ft=yaml:
+---
+copy:
+  type: node
+  network: default
+  pool: default
+  count: 1
+  image: {{ image }}
+
+  graphic: yes
+  user:
+    felixsch:
+      password: felix
+    root:
+      password: linux
+  ssh:
+    copy-key:
+      users:
+        - felixsch
+        - root
+  copy:
+    /home/felixsch/testdir1: testdir
+    /home/felixsch/testdir2: testdir
+    /home/felixsch/testfile: testfile.txt
